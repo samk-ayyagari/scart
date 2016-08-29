@@ -11,7 +11,6 @@ body {
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header-class{
   margin: 10px 0 20px 0;
-  font-size: 5vw;
 }
 .padding-bottom30{
   padding-bottom:30px;
@@ -47,9 +46,8 @@ body {
   width:60px;
 }
 
-#editBtn {
+.editBtn {
   width:150px;
-  margin-left: 20%;
 }
 
 #small {
@@ -78,13 +76,29 @@ body {
     width: 800px;
     height: 600px;
   }
+  #modal-window.container {
+    width: 800px;
+  }
+  .header-class{
+    font-size: 4vw;
+  }
 }
 
 @media (min-width: 960px) and (max-width:1199px) {
-    .ngdialog.ngdialog-theme-default .ngdialog-content{
-      width: 700px;
-      height: 500px;
-    }
+  .container{
+    width: 750px;
+  }
+  .ngdialog.ngdialog-theme-default .ngdialog-content{
+    width: 750px;
+    height: 700px;
+  }
+  
+  #modal-window.container {
+    width: 700px;
+  }
+  .header-class{
+    font-size: 4.5vw;
+  }
 }
 
 @media (min-width: 761px) and (max-width:959px)  {
@@ -92,8 +106,15 @@ body {
     width: 750px;
   } 
   .ngdialog.ngdialog-theme-default .ngdialog-content{
+    width: 750px;
+    height: 700px;
+  }
+  
+  #modal-window.container{
     width: 700px;
-    height: 500px;
+  }
+  .header-class{
+    font-size: 4.5vw;
   }
 }
 
@@ -102,8 +123,14 @@ body {
     width: 460px;
   }
   .ngdialog.ngdialog-theme-default .ngdialog-content{
+    width: 530px;
+    height: 700px;
+  }
+  #modal-window.container {
     width: 500px;
-    height: 400px;
+  }
+  .header-class{
+    font-size: 5vw;
   }
 }
 
@@ -112,8 +139,14 @@ body {
     width: 300px;
   }
   .ngdialog.ngdialog-theme-default .ngdialog-content{
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 800px;
+  }
+  #modal-window.container {
+    width: 320px;
+  }
+  .header-class{
+    font-size: 6vw;
   }
 }
 .grid-heading{
@@ -143,3 +176,6 @@ body {
   padding-left:10px;
 }
 
+.vcenter {
+  text-align: center;
+}

@@ -13,9 +13,10 @@ angular.module('shoppingCartApp')
   	var vm = this;
   	$scope.item = data.list[data.index];
 
+
   	vm.availableQty = [{name:'1', value:1 }, {name:'2', value:2 }, {name:'3', value:3 },{name:'4', value:4 }];
 
-  	
+  	vm.selectedSize = $scope.item.p_available_options.sizes[0];
 
   	$scope.getBGColor = function(color){
   		var bgObj = {};

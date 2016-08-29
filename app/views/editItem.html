@@ -1,42 +1,51 @@
 <div class="ngdialog-message">
-  <div class="container clearfix col-md-offset-1 margin-top50">
-      <div class="row col-md-3 pull-left margin-top30">
-        <div class="row product-details">
-        </div>
-
-        <div class="row col-md-offset-2 text-uppercase padding-top15" ng-bind="item.p_name"></div>
-        
-        <div class="row col-md-offset-2 margin-top15">
-          <div class="pull-left" ng-bind="item.c_currency"></div>
-          <div ng-bind="item.p_price" class="pull-left font36"></div> 
-        </div>
-
-        <div class="row col-md-offset-2 text-uppercase margin-top30" ng-bind="item.p_selected_color.name"></div>
-
-        <div class="row col-md-offset-1 margin-top15">
-            <div ng-repeat="color in  item.p_available_options.colors">
-              <div ng-style="getBGColor(color.hexcode)" ng-click="ep.setColor(color)" class="pull-left col-md-offset-1 color-selection"> </div>
-            </div>
-        </div>
-
-        <div class="row margin-top30 col-md-offset-1">
-            <select class="select-small form-control text-capitalize pull-left" ng-model="ep.selectedSize"
-              ng-options="sizeItem.code for sizeItem in item.p_available_options.sizes" ng-init="ep.selectedSize =item.p_selected_size">
-            </select>
-
-            <select class="select-small form-control text-capitalize pull-left col-md-offset-1" ng-model="ep.selectedQty" ng-init="ep.selectedQty=ep.availableQty[0].name"
-              ng-options="qtyItem.name as qtyItem.value for qtyItem in ep.availableQty">
-            </select>
-        </div>
-      </div>
-
-      <div class="row col-md-offset-1 col-md-2 pull-left">
-          <div class="">
+  <div id="modal-window"  class="container clearfix margin-top50">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12 pull-right margin-top30">
+          <div class="row vcenter">
               <img ng-src="{{item.p_image}}"/>
           </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12 pull-right margin-top30">
+          <div class="row product-details hidden-xs hidden-sm col-md-offset-2">
+            
+          </div>
+          <div class="row margin-top30 ">
+            <div class="text-uppercase padding-top15 col-md-offset-2 col-sm-offset-2 col-xs-offset-2" ng-bind="item.p_name"></div>
+          </div>
+          <div class="row margin-top30 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+            <div class="pull-left" ng-bind="item.c_currency"></div>
+            <div ng-bind="item.p_price" class="pull-left font36"></div> 
+          </div>
+          <div class="row margin-top30 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+            <div ng-repeat="color in  item.p_available_options.colors">
+              <div ng-style="getBGColor(color.hexcode)" ng-click="ep.setColor(color)" class="pull-left col-md-offset-1 col-sm-offset-1 col-xs-offset-1 color-selection"> </div>
+            </div>
+          </div>
+          <div class="row margin-top30 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+            <select class="select-small form-control text-capitalize pull-left" 
+              ng-options="sizeItem.code for sizeItem in item.p_available_options.sizes" ng-model="ep.selectedSize">
+            </select>
+
+            <select class="select-small form-control text-capitalize pull-left col-md-offset-1 col-sm-offset-1 col-xs-offset-1" ng-model="ep.selectedQty" ng-init="ep.selectedQty=ep.availableQty[0].name"
+              ng-options="qtyItem.name as qtyItem.value for qtyItem in ep.availableQty">
+            </select>
+          </div>
+        </div>
       </div>
+
+      <div class="row margin-top50">
+          <button type="button" class="btn btn-primary col-md-offset-1 col-sm-offset-2 col-xs-offset-2 col-md-3 col-sm-3 col-xs-3" ng-click="ep.editItem()">EDIT</button>
+      </div>
+      
   </div>
 </div>
-<div class="col-md-offset-1 ngdialog-buttons col-md-2">
-    <button id="editBtn" type="button" class="btn btn-primary" ng-click="ep.editItem()">EDIT</button>
-</div>
+
+ 
+        
+        
+
+        
+
+        
+        

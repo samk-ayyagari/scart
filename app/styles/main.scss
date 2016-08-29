@@ -1,0 +1,145 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+body {
+  padding: 0;
+  font-family: 'Helvetica',sans-serif;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header-class{
+  margin: 10px 0 20px 0;
+  font-size: 5vw;
+}
+.padding-bottom30{
+  padding-bottom:30px;
+}
+.border-bottom{
+  padding: 30px 0 50px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.ngdialog.ngdialog-theme-default .ngdialog-content{
+  background:#ffffff;
+}
+
+
+.product-details{
+  border-top: 5px solid #e5e5e5;
+}
+
+.font36 {
+  font-size: 36px;
+}
+
+.padding-top15 {
+  padding-top:15px;
+}
+
+.color-selection{
+  width:25px;
+  height: 25px;
+  border: 1px solid #000000;
+}
+
+.select-small{
+  width:60px;
+}
+
+#editBtn {
+  width:150px;
+  margin-left: 20%;
+}
+
+#small {
+  width: 20px;
+  border: 1px solid;
+}
+
+#large-input {
+  width: 140px;
+  border: 1px solid;
+  height: 35px;
+
+}
+.modal-large{
+  width: 500px;
+  height: 700px;
+}
+
+#ngdialog1 > ngdialog-content {
+  width:700px;
+  height: 500px;
+}
+
+@media (min-width: 1200px) {
+  .ngdialog.ngdialog-theme-default .ngdialog-content{
+    width: 800px;
+    height: 600px;
+  }
+}
+
+@media (min-width: 960px) and (max-width:1199px) {
+    .ngdialog.ngdialog-theme-default .ngdialog-content{
+      width: 700px;
+      height: 500px;
+    }
+}
+
+@media (min-width: 761px) and (max-width:959px)  {
+  .container{
+    width: 750px;
+  } 
+  .ngdialog.ngdialog-theme-default .ngdialog-content{
+    width: 700px;
+    height: 500px;
+  }
+}
+
+@media (min-width: 480px) and (max-width:760px) {
+  .container{
+    width: 460px;
+  }
+  .ngdialog.ngdialog-theme-default .ngdialog-content{
+    width: 500px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 479px) {
+  .container{
+    width: 300px;
+  }
+  .ngdialog.ngdialog-theme-default .ngdialog-content{
+    width: 300px;
+    height: 400px;
+  }
+}
+.grid-heading{
+  padding: 10px 5px 10px 25px;
+  border-top : 2px solid #e5e5e5;
+}
+.border-bottom5{
+  border-bottom: 5px solid #e5e5e5;
+}
+.margin-top-bottom-50{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.margin-top50{
+  margin-top: 50px;
+}
+
+.margin-top30{
+  margin-top: 30px;
+}
+
+.margin-top15{
+  margin-top: 15px;
+}
+.padding-left10{
+  padding-left:10px;
+}
+

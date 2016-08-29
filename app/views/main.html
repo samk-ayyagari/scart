@@ -1,0 +1,118 @@
+<div class="container">
+  <h1 class="header-class" data-ng-bind="mc.appHeading"></h1>
+  <div class="row grid-heading hidden-xs hidden-sm border-bottom5">
+    <span class="col-md-9 text-muted">4 ITEMS</span>
+    <span class="col-md-1 text-muted">SIZE</span>
+    <span class="col-md-1 text-muted">QTY</span>
+    <span class="col-md-1 text-muted">PRICE</span>
+  </div>
+  <div class="visible-xs-block visible-sm-block row border-bottom5"></div>
+  <div class="row border-bottom margin-top-bottom-50"  ng-repeat="item in mc.products">
+    <div class="row clearfix">
+      <div class="pull-left col-md-2 col-xs-6 col-sm-6">
+        <img class="" ng-src="{{item.p_image}}"> 
+      </div>
+
+      <div class="pull-left col-md-7 col-xs-6 col-sm-6 margin-top15">
+        <div>
+          <strong class="text-uppercase" ng-bind="item.p_variation + ' ' + item.p_name"></strong>
+        </div>
+        <div class="text-muted">
+          <span >Style #:</span>
+          <span class="text-uppercase" ng-bind="item.p_style"></span>
+        </div>
+        <div>
+          <span class="text-muted">Color:</span>
+          <span class="text-capitalize text-muted" >{{item.p_selected_color.name}}</span>
+        </div>
+        <div class="visible-xs-block visible-sm-block">
+          <span class="text-muted">Size:</span>
+          <span class="text-capitalize text-muted" >{{item.p_selected_size.code}}</span>
+        </div>
+        <div class="visible-xs-block visible-sm-block">
+          <span class="text-muted">Quantity:</span>
+          <span class="text-capitalize text-muted" >{{item.p_quantity}}</span>
+        </div>
+        <div class="visible-xs-block visible-sm-block">
+          <span class="text-muted">Price:</span>
+          <span class="text-capitalize text-muted" >{{item.p_originalprice}}</span>
+        </div>
+        <div class="clearfix margin-top50 hidden-xs hidden-sm">
+            <span class="pull-left  text-muted" ng-click="mc.editProduct($index)">EDIT | </span>
+            <span class="pull-left  text-muted padding-left10">X REMOVE | </span>
+            <span class="pull-left  text-muted padding-left10">SAVE FOR LATER </span>
+        </div>
+      </div>
+
+      <div class="visible-xs-block visible-sm-block col-xs-12 col-sm-12 clearfix margin-top50">
+          <span class=" pull-left text-muted" ng-click="mc.editProduct($index)">EDIT | </span>
+          <span class=" pull-left text-muted padding-left10">X REMOVE | </span>
+          <span class=" pull-left text-muted padding-left10">SAVE FOR LATER </span>
+      </div>
+
+      <div class="pull-left text-uppercase col-md-1 hidden-xs hidden-sm">
+        <span>{{item.p_selected_size.code}}</span>
+      </div>
+      
+      <div class="pull-left col-md-1 hidden-xs hidden-sm">
+        <input type="text" id="small" ng-model="item.p_quantity">
+      </div>
+      <div class="pull-left col-md-1 hidden-xs hidden-sm padding-bottom30">
+        <span>{{item.p_originalprice}}</span>
+      </div>
+    </div>
+  </div>
+  <section class="margin-top-bottom-50 clearfix row">
+    <div class="col-md-2 pull-left hidden-xs hidden-sm text-muted">
+      <nav class="margin-top15"><strong>Need help or have any questions?</strong></nav>
+      <nav class="margin-top15">Call customer service at 1-800-555-5555</nav>
+      <nav class="margin-top15"><u>Chat with one of our stylists</u></nav>
+      <nav class="margin-top15"><u>See Return and exchange policy</u></nav>
+    </div>
+    <div class="col-md-8 col-md-offset-2 pull-left clearfix">
+      <div class="row">
+        <div class="col-md-5 pull-left" >
+          <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12
+           text-uppercase">Enter Promotion code or gift card
+           </div>
+         </div>
+        </div>
+        
+        <div class="col-md-7 pull-left">
+          <div class="row">
+            <div class="col-md-5 col-xs-6 col-sm-6 col-md-offset-1 pull-left margin-top5">
+            <input type="text" id="large-input">
+            </div>
+            <div class="col-md-5 col-xs-6 col-sm-6 col-md-offset-1 pull-left margin-top5">
+              <button class="btn btn-default">APPLY</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="product-details col-md-12  margin-top30"></div>
+      </div>
+      <div class="row margin-top30">
+        <div class="col-md-3 pull-left">Subtotal</div>
+        <div class="col-md-offset-6 col-md-3 pull-right" ng-bind="mc.products.subtotal"></div>
+      </div>
+      <div class="row margin-top30">
+        <div class="col-md-3 pull-left">Promotion code JF10 Applied</div>
+        <div class="col-md-offset-6 col-md-3 pull-right" ng-bind="mc.products.discountValue"></div>
+      </div>
+      <div class="row margin-top30">
+        <div class="col-md-3 pull-left">Estimated Shipping*</div>
+        <div class="col-md-offset-6 col-md-3 pull-right">Free</div>
+      </div>
+      <div class="row margin-top30 grid-heading border-bottom5">
+        <div class="col-md-3 pull-left">Estimated Total</div>
+        <div class="col-md-offset-6 col-md-3 pull-right" ng-bind="mc.products.finalAmount"></div>
+      </div>
+    </div>
+      
+      
+      
+    </div>
+  </section>
+</div>

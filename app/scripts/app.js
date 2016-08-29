@@ -10,12 +10,7 @@
  */
 angular
   .module('shoppingCartApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch',
     'ngDialog'
   ])
   .config(function ($routeProvider) {

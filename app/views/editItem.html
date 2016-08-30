@@ -11,18 +11,19 @@
             
           </div>
           <div class="row margin-top30 ">
-            <div class="text-uppercase padding-top15 col-md-offset-2 col-lg-offset-2 col-sm-offset-2 col-xs-offset-2" ng-bind="item.p_name"></div>
+            <div class="text-uppercase padding-top15 col-md-offset-2 col-lg-offset-2 vcenter" ng-bind="item.p_name"></div>
           </div>
-          <div class="row margin-top30 col-md-offset-2 col-lg-offset-2  col-sm-offset-2 col-xs-offset-2">
+          <div class="row margin-top30 clearfix col-md-offset-2 col-lg-offset-2 vertical-align">
             <div class="pull-left" ng-bind="item.c_currency"></div>
             <div ng-bind="item.p_price" class="pull-left font36"></div> 
           </div>
-          <div class="row margin-top30 col-md-offset-1 col-lg-offset-1  col-sm-offset-1 col-xs-offset-1">
-            <div ng-repeat="color in  item.p_available_options.colors">
-              <div ng-style="getBGColor(color.hexcode)" ng-click="ep.setColor(color)" class="pull-left col-md-offset-1 col-lg-offset-1 col-sm-offset-1 col-xs-offset-1 color-selection"> </div>
-            </div>
+          <div class="row margin-top30 vertical-align">
+            <ul class="col-lg-6 col-md-5 col-sm-6 col-xs-6 col-lg-offset-4 col-md-offset-2 col-lg-offset-2 col-xs-offset-2 col-sm-offset-2">
+              <li ng-repeat="color in  item.p_available_options.colors" ng-style="getBGColor(color.hexcode)" ng-click="ep.setColor(color)" class="pull-left color-selection">
+              </li>
+            </ul>
           </div>
-          <div class="row margin-top30 col-md-offset-2 col-lg-offset-2 col-sm-offset-2 col-xs-offset-2">
+          <div class="row margin-top30 col-md-offset-2 col-lg-offset-2 vertical-align">
             <select class="select-small form-control text-capitalize pull-left" 
               ng-options="sizeItem.code for sizeItem in item.p_available_options.sizes" ng-model="ep.selectedSize">
             </select>
@@ -34,8 +35,8 @@
         </div>
       </div>
 
-      <div class="row margin-top50">
-          <button type="button" class="btn btn-primary col-md-offset-1 col-lg-offset-1 col-sm-offset-2 col-xs-offset-2 col-md-3 col-sm-3 col-xs-3" ng-click="ep.editItem()">EDIT</button>
+      <div class="row margin-top50 col-md-6 m-x-auto vertical-align">
+          <button type="button" class="btn btn-primary  col-md-3 col-sm-3 col-xs-3" ng-click="ep.editItem()">EDIT</button>
       </div>
       
   </div>
